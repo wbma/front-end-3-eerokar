@@ -1,12 +1,21 @@
+
+  <ul>
+    <li *ngFor="let route of stopArray">
+    <p *ngFor="let i of route.patterns"> {{i.route.longName + "  Route number:" + i.route.shortName}}</p>
+    </li>
+  </ul>
+
+
+
 <p>
   {{ printThis }}
-</p>
+  </p>
 
-<ul>
-  <li *ngFor="let media of mediaArray">
-    <img [src]="mediaService.mediaUrl + media.thumbnail">
-    <!-- <img [src]="mediaService.mediaUrl + media.filename.split('.')[0]+'-tn320.png'"> -->
-    <h4>Title</h4>
-    <p>Description</p>
-  </li>
-</ul>
+  <ul>
+    <li *ngFor="let media of mediaArray">
+      <img [src]="mediaService.mediaUrl + media.thumbnail">
+      <!-- <img [src]="mediaService.mediaUrl + media.filename.split('.')[0]+'-tn320.png'"> -->
+      <h4>Title</h4>
+      <p>Description</p>
+    </li>
+  </ul>
